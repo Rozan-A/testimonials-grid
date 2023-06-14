@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed";
+  margin: 0;
+  background-color: hsl(0, 0%, 81%);
+}
+.parent {
+  min-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.parent .container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 50%, 50%;
+  gap: 30px;
+  margin: 30px auto;
+}
+@media (max-width: 767px) {
+  .parent {
+    min-width: 375px;
+    padding: 20px;
+  }
+  .parent .container {
+    grid-template-columns: 1fr;
+  }
+}
+.parent .container > div {
+  padding: 35px 35px 15px;
+  border-radius: 7px;
+}
+@media (max-width: 767px) {
+  .parent .container > div {
+    padding: 25px;
+  }
+}
+.parent .container .daniel {
+  color: hsl(210, 46%, 95%);
+  /* grid-column: span 2; */
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+}
+
+.parent .container .daniel::before {
+  position: absolute;
+  font-family: "font awesome 5 free";
+  content: "\f10d";
+  color: hsl(210deg 46% 95% / 34%);
+  font-weight: 900;
+  top: -51px;
+  right: 79px;
+  font-size: 227px;
+}
+@media (min-width: 768px) {
+  .parent .container .daniel {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 767px) {
+  .parent .container .daniel::before {
+    right: 15px;
+    font-size: 201px;
+  }
+}
+.parent .container .start {
+  align-items: center;
+  display: flex;
+}
+.parent .container .start img {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+.parent .start .name {
+}
+.parent .start .name div:first-child {
+}
+
+.parent .start .job {
+  opacity: 50%;
+}
+.parent .one {
+  font-weight: 600;
+  font-size: 27px;
+}
+
+.parent .two {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 70%;
+  font-weight: normal;
+}
+@media (max-width: 767px) {
+  .parent .one {
+    margin: 15px auto;
+    font-size: 23px;
+  }
+  .parent .two {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+}
+.parent .container .jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+}
+.parent .container .kira {
+  color: hsl(217, 19%, 35%);
+  background-color: white;
+
+  /* grid-row: span 2; */
+}
+@media (max-width: 767px) {
+  .kira {
+    order: 10;
+  }
+}
+@media (min-width: 768px) {
+  .parent .container .kira {
+    grid-row: span 2;
+
+  }
+}
+.parent .container .jeanette {
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+.parent .container .patrick {
+  background-color: hsl(219, 29%, 14%);
+  /* grid-column: span 2; */
+  color: hsl(210, 46%, 95%);
+}
+@media (min-width: 768px) {
+  .parent .container .patrick {
+    grid-column: span 2;
+  }
+}
+a.name {
+  background: orange;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
